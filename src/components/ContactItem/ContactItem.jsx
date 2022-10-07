@@ -1,3 +1,4 @@
+import { Btn, ListItem, P } from 'components/App.styled';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,19 +6,19 @@ export const ContactItem = ({ contacts, onDelete }) => {
   return (
     <>
       {contacts.map(contact => (
-        <li key={contact.id}>
-          <p>
+        <ListItem key={contact.id}>
+          <P>
             {contact.name}: {contact.number}
-          </p>
-          <button
+          </P>
+          <Btn
             type="button"
             onClick={() => {
               onDelete(contact.id);
             }}
           >
             Delete
-          </button>
-        </li>
+          </Btn>
+        </ListItem>
       ))}
     </>
   );

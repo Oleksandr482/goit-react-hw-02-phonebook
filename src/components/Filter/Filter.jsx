@@ -1,12 +1,12 @@
 import React from 'react';
-import { Label } from 'components/App.styled';
+import { FormInput, Label } from 'components/App.styled';
 import PropTypes from 'prop-types';
 
 export const Filter = ({ filterKey, onChange }) => {
   return (
     <Label>
       Find contacts by name
-      <input type="text" value={filterKey} onChange={onChange} />
+      <FormInput type="text" value={filterKey} onChange={onChange} />
     </Label>
   );
 };
